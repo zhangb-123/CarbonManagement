@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳排放管理系统 - PC端原型设计</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+                        <i class="fas fa-leaf text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-base font-bold text-gray-800">碳排放管理</h1>
+                        <p class="text-xs text-gray-500">PC端原型</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="menu-section">概览</div>
+                <a href="pages/dashboard.html" class="menu-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>数据概览</span>
+                </a>
+                <div class="menu-section">数据管理</div>
+                <a href="pages/data-entry.html" class="menu-item">
+                    <i class="fas fa-edit"></i>
+                    <span>数据录入</span>
+                </a>
+                <a href="pages/monitoring.html" class="menu-item">
+                    <i class="fas fa-eye"></i>
+                    <span>实时监测</span>
+                </a>
+                <a href="pages/analysis.html" class="menu-item">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>数据分析</span>
+                </a>
+                <div class="menu-section">报告交易</div>
+                <a href="pages/reports.html" class="menu-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>报告中心</span>
+                </a>
+                <a href="pages/trading.html" class="menu-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>碳交易</span>
+                </a>
+                <div class="menu-section">系统管理</div>
+                <a href="pages/solutions.html" class="menu-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>减排方案</span>
+                </a>
+                <a href="pages/company.html" class="menu-item">
+                    <i class="fas fa-building"></i>
+                    <span>企业管理</span>
+                </a>
+                <a href="pages/profile.html" class="menu-item">
+                    <i class="fas fa-user"></i>
+                    <span>个人中心</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="flex items-center space-x-4">
+                    <h2 class="text-xl font-bold text-gray-800">原型页面总览</h2>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="btn btn-secondary text-sm">
+                        <i class="fas fa-expand mr-2"></i>全屏预览
+                    </button>
+                    <div class="flex items-center space-x-3">
+                        <button class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-gray-200">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full cursor-pointer">
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <a href="pages/dashboard.html" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="h-40 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 opacity-10" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400'); background-size: cover;"></div>
+                            <i class="fas fa-chart-line text-white text-5xl opacity-80"></i>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-tachometer-alt text-green-600 mr-2"></i>
+                                <h3 class="text-base font-semibold text-gray-800">数据概览</h3>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">Dashboard - 碳排放数据可视化仪表盘</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">数据可视化</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">实时统计</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="pages/data-entry.html" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="h-40 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                            <i class="fas fa-edit text-white text-5xl opacity-80"></i>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-database text-blue-600 mr-2"></i>
+                                <h3 class="text-base font-semibold text-gray-800">数据录入</h3>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">Data Entry - 碳排放数据记录与导入</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">数据录入</span>
+                                <span class="px-2 py-1 bg-indigo-100 text-indigo-700 rounded text-xs">批量导入</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="pages/monitoring.html" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="h-40 bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center">
+                            <i class="fas fa-broadcast-tower text-white text-5xl opacity-80"></i>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-eye text-cyan-600 mr-2"></i>
+                                <h3 class="text-base font-semibold text-gray-800">实时监测</h3>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">Monitoring - 碳排放实时监控面板</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-cyan-100 text-cyan-700 rounded text-xs">实时监控</span>
+                                <span class="px-2 py-1 bg-red-100 text-red-700 rounded text-xs">预警系统</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="pages/analysis.html" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="h-40 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                            <i class="fas fa-chart-bar text-white text-5xl opacity-80"></i>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-chart-area text-purple-600 mr-2"></i>
+                                <h3 class="text-base font-semibold text-gray-800">数据分析</h3>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">Analysis - 多维度碳排放趋势分析</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">趋势分析</span>
+                                <span class="px-2 py-1 bg-indigo-100 text-indigo-700 rounded text-xs">数据对比</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="pages/reports.html" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="h-40 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                            <i class="fas fa-file-alt text-white text-5xl opacity-80"></i>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-file-chart-line text-orange-600 mr-2"></i>
+                                <h3 class="text-base font-semibold text-gray-800">报告中心</h3>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">Reports - 自动化碳排放报告工具</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs">自动生成</span>
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-700 rounded text-xs">导出功能</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="pages/trading.html" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="h-40 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+                            <i class="fas fa-exchange-alt text-white text-5xl opacity-80"></i>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-coins text-teal-600 mr-2"></i>
+                                <h3 class="text-base font-semibold text-gray-800">碳交易管理</h3>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">Trading - 碳配额管理和交易平台</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-teal-100 text-teal-700 rounded text-xs">配额管理</span>
+                                <span class="px-2 py-1 bg-cyan-100 text-cyan-700 rounded text-xs">交易记录</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="pages/solutions.html" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="h-40 bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center">
+                            <i class="fas fa-lightbulb text-white text-5xl opacity-80"></i>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-seedling text-amber-600 mr-2"></i>
+                                <h3 class="text-base font-semibold text-gray-800">减排方案</h3>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">Solutions - 减排措施与优化建议</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs">减排措施</span>
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-700 rounded text-xs">优化建议</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="pages/company.html" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="h-40 bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
+                            <i class="fas fa-building text-white text-5xl opacity-80"></i>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-industry text-pink-600 mr-2"></i>
+                                <h3 class="text-base font-semibold text-gray-800">企业管理</h3>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">Company - 企业信息与组织管理</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs">企业信息</span>
+                                <span class="px-2 py-1 bg-rose-100 text-rose-700 rounded text-xs">组织架构</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="mt-8 bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">
+                        <i class="fas fa-info-circle text-green-600 mr-2"></i>设计说明
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <h4 class="font-medium text-gray-800 mb-2">
+                                <i class="fas fa-desktop text-green-600 mr-1"></i>PC端优化
+                            </h4>
+                            <p class="text-sm text-gray-600">针对大屏幕优化的布局设计，充分利用屏幕空间展示更多数据</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800 mb-2">
+                                <i class="fas fa-columns text-green-600 mr-1"></i>侧边导航
+                            </h4>
+                            <p class="text-sm text-gray-600">采用固定侧边栏导航，方便快速切换功能模块</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800 mb-2">
+                                <i class="fas fa-chart-area text-green-600 mr-1"></i>数据可视化
+                            </h4>
+                            <p class="text-sm text-gray-600">丰富的图表展示，直观呈现碳排放数据</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
