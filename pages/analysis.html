@@ -17,51 +17,51 @@
                         <i class="fas fa-leaf text-white text-lg"></i>
                     </div>
                     <div>
-                        <h1 class="text-base font-bold text-gray-800">碳排放管理</h1>
-                        <p class="text-xs text-gray-500">PC端原型</p>
+                        <h1 class="text-base font-bold text-gray-800" data-i18n="common.systemName">碳排放管理</h1>
+                        <p class="text-xs text-gray-500" data-i18n="common.pcPrototype">PC端原型</p>
                     </div>
                 </div>
             </div>
             <nav class="sidebar-menu">
-                <div class="menu-section">概览</div>
+                <div class="menu-section" data-i18n="nav.overview">概览</div>
                 <a href="dashboard.html" class="menu-item">
                     <i class="fas fa-tachometer-alt"></i>
-                    <span>数据概览</span>
+                    <span data-i18n="nav.dashboard">数据概览</span>
                 </a>
-                <div class="menu-section">数据管理</div>
+                <div class="menu-section" data-i18n="nav.dataManagement">数据管理</div>
                 <a href="data-entry.html" class="menu-item">
                     <i class="fas fa-edit"></i>
-                    <span>数据录入</span>
+                    <span data-i18n="nav.dataEntry">数据录入</span>
                 </a>
                 <a href="monitoring.html" class="menu-item">
                     <i class="fas fa-eye"></i>
-                    <span>实时监测</span>
+                    <span data-i18n="nav.monitoring">实时监测</span>
                 </a>
                 <a href="analysis.html" class="menu-item active">
                     <i class="fas fa-chart-pie"></i>
-                    <span>数据分析</span>
+                    <span data-i18n="nav.analysis">数据分析</span>
                 </a>
-                <div class="menu-section">报告交易</div>
+                <div class="menu-section" data-i18n="nav.reportTrading">报告交易</div>
                 <a href="reports.html" class="menu-item">
                     <i class="fas fa-file-alt"></i>
-                    <span>报告中心</span>
+                    <span data-i18n="nav.reports">报告中心</span>
                 </a>
                 <a href="trading.html" class="menu-item">
                     <i class="fas fa-exchange-alt"></i>
-                    <span>碳交易</span>
+                    <span data-i18n="nav.trading">碳交易</span>
                 </a>
-                <div class="menu-section">系统管理</div>
+                <div class="menu-section" data-i18n="nav.systemManagement">系统管理</div>
                 <a href="solutions.html" class="menu-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>减排方案</span>
+                    <span data-i18n="nav.solutions">减排方案</span>
                 </a>
                 <a href="company.html" class="menu-item">
                     <i class="fas fa-building"></i>
-                    <span>企业管理</span>
+                    <span data-i18n="nav.company">企业管理</span>
                 </a>
                 <a href="profile.html" class="menu-item">
                     <i class="fas fa-user"></i>
-                    <span>个人中心</span>
+                    <span data-i18n="nav.profile">个人中心</span>
                 </a>
             </nav>
         </aside>
@@ -69,12 +69,16 @@
         <main class="main-content">
             <header class="header">
                 <div class="flex items-center space-x-4">
-                    <h2 class="text-xl font-bold text-gray-800">数据分析</h2>
+                    <h2 class="text-xl font-bold text-gray-800" data-i18n="nav.analysis">数据分析</h2>
                     <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">多维度分析</span>
                 </div>
                 <div class="flex items-center space-x-4">
+                    <button id="langToggle" class="lang-toggle-btn" onclick="i18n.toggleLang()">
+                        <i class="fas fa-globe"></i>
+                        <span class="lang-text">EN</span>
+                    </button>
                     <button class="btn btn-outline text-sm">
-                        <i class="fas fa-download mr-2"></i>导出报告
+                        <i class="fas fa-download mr-2"></i><span data-i18n="header.exportReport">导出报告</span>
                     </button>
                     <button class="btn btn-secondary text-sm">
                         <i class="fas fa-filter mr-2"></i>高级筛选
@@ -117,7 +121,7 @@
                         <p class="text-4xl font-bold mb-1">38,456</p>
                         <p class="text-sm opacity-80">总排放量(吨CO₂)</p>
                         <p class="text-sm mt-3 opacity-90">
-                            <i class="fas fa-arrow-down mr-1"></i>同比去年 -12.3%
+                            <i class="fas fa-arrow-down mr-1"></i><span data-i18n="pages.analysis.yearOnYear">同比</span>去年 -12.3%
                         </p>
                     </div>
                     <div class="stat-card blue">
@@ -126,7 +130,7 @@
                             <span class="px-2 py-1 bg-white/20 rounded text-xs">变化</span>
                         </div>
                         <p class="text-4xl font-bold mb-1">-12.3%</p>
-                        <p class="text-sm opacity-80">同比变化</p>
+                        <p class="text-sm opacity-80" data-i18n="pages.analysis.yearOnYear">同比变化</p>
                         <p class="text-sm mt-3 opacity-90">
                             <i class="fas fa-info-circle mr-1"></i>减少 5,401 吨
                         </p>
@@ -135,7 +139,7 @@
 
                 <div class="card mb-6">
                     <div class="card-header">
-                        <h3 class="card-title">排放趋势分析</h3>
+                        <h3 class="card-title" data-i18n="pages.analysis.trendAnalysis">排放趋势分析</h3>
                         <select class="input" style="width: 120px;">
                             <option>月度趋势</option>
                             <option>季度趋势</option>
@@ -181,28 +185,28 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center">
                                     <span class="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                                    <span class="text-sm text-gray-700">生产车间</span>
+                                    <span class="text-sm text-gray-700" data-i18n="dashboard.productionWorkshop">生产车间</span>
                                 </div>
                                 <span class="text-sm font-medium text-gray-800">17,305吨 (45%)</span>
                             </div>
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center">
                                     <span class="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
-                                    <span class="text-sm text-gray-700">交通运输</span>
+                                    <span class="text-sm text-gray-700" data-i18n="dashboard.transportation">交通运输</span>
                                 </div>
                                 <span class="text-sm font-medium text-gray-800">10,768吨 (28%)</span>
                             </div>
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center">
                                     <span class="w-3 h-3 bg-purple-500 rounded-full mr-2"></span>
-                                    <span class="text-sm text-gray-700">办公用电</span>
+                                    <span class="text-sm text-gray-700" data-i18n="dashboard.officeElectricity">办公用电</span>
                                 </div>
                                 <span class="text-sm font-medium text-gray-800">5,768吨 (15%)</span>
                             </div>
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center">
                                     <span class="w-3 h-3 bg-orange-500 rounded-full mr-2"></span>
-                                    <span class="text-sm text-gray-700">其他</span>
+                                    <span class="text-sm text-gray-700" data-i18n="dashboard.others">其他</span>
                                 </div>
                                 <span class="text-sm font-medium text-gray-800">4,615吨 (12%)</span>
                             </div>
@@ -211,15 +215,15 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">同比环比分析</h3>
+                            <h3 class="card-title" data-i18n="pages.analysis.comparisonAnalysis">同比环比分析</h3>
                         </div>
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th>指标</th>
                                     <th class="text-right">本期</th>
-                                    <th class="text-right">同比</th>
-                                    <th class="text-right">环比</th>
+                                    <th class="text-right" data-i18n="pages.analysis.yearOnYear">同比</th>
+                                    <th class="text-right" data-i18n="pages.analysis.monthOnMonth">环比</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -305,7 +309,7 @@
                             <div class="p-4 bg-green-50 rounded-lg border border-green-200">
                                 <div class="flex items-center justify-between mb-2">
                                     <span class="text-base font-medium text-gray-800">光伏发电项目</span>
-                                    <span class="badge badge-success">已完成</span>
+                                    <span class="badge badge-success" data-i18n="common.completed">已完成</span>
                                 </div>
                                 <div class="flex items-center justify-between text-sm text-gray-600">
                                     <span>减排量: 2,400吨CO₂</span>
@@ -315,7 +319,7 @@
                             <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
                                 <div class="flex items-center justify-between mb-2">
                                     <span class="text-base font-medium text-gray-800">节能设备改造</span>
-                                    <span class="badge badge-info">进行中</span>
+                                    <span class="badge badge-info" data-i18n="common.inProgress">进行中</span>
                                 </div>
                                 <div class="flex items-center justify-between text-sm text-gray-600">
                                     <span>预计减排: 1,800吨CO₂</span>
@@ -338,5 +342,6 @@
             </div>
         </main>
     </div>
+    <script src="../js/i18n.js"></script>
 </body>
 </html>

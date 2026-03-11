@@ -17,51 +17,51 @@
                         <i class="fas fa-leaf text-white text-lg"></i>
                     </div>
                     <div>
-                        <h1 class="text-base font-bold text-gray-800">碳排放管理</h1>
-                        <p class="text-xs text-gray-500">PC端原型</p>
+                        <h1 class="text-base font-bold text-gray-800" data-i18n="common.systemName">碳排放管理</h1>
+                        <p class="text-xs text-gray-500" data-i18n="common.pcPrototype">PC端原型</p>
                     </div>
                 </div>
             </div>
             <nav class="sidebar-menu">
-                <div class="menu-section">概览</div>
+                <div class="menu-section" data-i18n="nav.overview">概览</div>
                 <a href="dashboard.html" class="menu-item">
                     <i class="fas fa-tachometer-alt"></i>
-                    <span>数据概览</span>
+                    <span data-i18n="nav.dashboard">数据概览</span>
                 </a>
-                <div class="menu-section">数据管理</div>
+                <div class="menu-section" data-i18n="nav.dataManagement">数据管理</div>
                 <a href="data-entry.html" class="menu-item">
                     <i class="fas fa-edit"></i>
-                    <span>数据录入</span>
+                    <span data-i18n="nav.dataEntry">数据录入</span>
                 </a>
                 <a href="monitoring.html" class="menu-item">
                     <i class="fas fa-eye"></i>
-                    <span>实时监测</span>
+                    <span data-i18n="nav.monitoring">实时监测</span>
                 </a>
                 <a href="analysis.html" class="menu-item">
                     <i class="fas fa-chart-pie"></i>
-                    <span>数据分析</span>
+                    <span data-i18n="nav.analysis">数据分析</span>
                 </a>
-                <div class="menu-section">报告交易</div>
+                <div class="menu-section" data-i18n="nav.reportTrading">报告交易</div>
                 <a href="reports.html" class="menu-item active">
                     <i class="fas fa-file-alt"></i>
-                    <span>报告中心</span>
+                    <span data-i18n="nav.reports">报告中心</span>
                 </a>
                 <a href="trading.html" class="menu-item">
                     <i class="fas fa-exchange-alt"></i>
-                    <span>碳交易</span>
+                    <span data-i18n="nav.trading">碳交易</span>
                 </a>
-                <div class="menu-section">系统管理</div>
+                <div class="menu-section" data-i18n="nav.systemManagement">系统管理</div>
                 <a href="solutions.html" class="menu-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>减排方案</span>
+                    <span data-i18n="nav.solutions">减排方案</span>
                 </a>
                 <a href="company.html" class="menu-item">
                     <i class="fas fa-building"></i>
-                    <span>企业管理</span>
+                    <span data-i18n="nav.company">企业管理</span>
                 </a>
                 <a href="profile.html" class="menu-item">
                     <i class="fas fa-user"></i>
-                    <span>个人中心</span>
+                    <span data-i18n="nav.profile">个人中心</span>
                 </a>
             </nav>
         </aside>
@@ -69,12 +69,16 @@
         <main class="main-content">
             <header class="header">
                 <div class="flex items-center space-x-4">
-                    <h2 class="text-xl font-bold text-gray-800">报告中心</h2>
-                    <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">自动生成</span>
+                    <h2 class="text-xl font-bold text-gray-800" data-i18n="nav.reports">报告中心</h2>
+                    <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm" data-i18n="index.autoGenerate">自动生成</span>
                 </div>
                 <div class="flex items-center space-x-4">
+                    <button id="langToggle" class="lang-toggle-btn" onclick="i18n.toggleLang()">
+                        <i class="fas fa-globe"></i>
+                        <span class="lang-text">EN</span>
+                    </button>
                     <button class="btn btn-primary text-sm">
-                        <i class="fas fa-plus mr-2"></i>新建报告
+                        <i class="fas fa-plus mr-2"></i><span data-i18n="pages.reports.generateReport">新建报告</span>
                     </button>
                     <div class="flex items-center space-x-3">
                         <button class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-gray-200">
@@ -115,28 +119,28 @@
 
                 <div class="card mb-6">
                     <div class="card-header">
-                        <h3 class="card-title">生成新报告</h3>
+                        <h3 class="card-title" data-i18n="pages.reports.generateReport">生成新报告</h3>
                     </div>
                     <div class="grid-3 mb-6">
                         <button class="p-6 border-2 border-green-200 bg-green-50 rounded-lg text-center hover:shadow-lg transition-shadow">
                             <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                                 <i class="fas fa-calendar-alt text-green-600 text-2xl"></i>
                             </div>
-                            <h4 class="text-base font-semibold text-gray-800 mb-2">月度报告</h4>
+                            <h4 class="text-base font-semibold text-gray-800 mb-2" data-i18n="pages.reports.monthlyReport">月度报告</h4>
                             <p class="text-sm text-gray-600">生成月度碳排放报告</p>
                         </button>
                         <button class="p-6 border border-gray-200 rounded-lg text-center hover:shadow-lg transition-shadow">
                             <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                                 <i class="fas fa-calendar-check text-blue-600 text-2xl"></i>
                             </div>
-                            <h4 class="text-base font-semibold text-gray-800 mb-2">季度报告</h4>
+                            <h4 class="text-base font-semibold text-gray-800 mb-2" data-i18n="pages.reports.quarterlyReport">季度报告</h4>
                             <p class="text-sm text-gray-600">生成季度碳排放报告</p>
                         </button>
                         <button class="p-6 border border-gray-200 rounded-lg text-center hover:shadow-lg transition-shadow">
                             <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                                 <i class="fas fa-file-chart-line text-purple-600 text-2xl"></i>
                             </div>
-                            <h4 class="text-base font-semibold text-gray-800 mb-2">年度报告</h4>
+                            <h4 class="text-base font-semibold text-gray-800 mb-2" data-i18n="pages.reports.annualReport">年度报告</h4>
                             <p class="text-sm text-gray-600">生成年度碳排放报告</p>
                         </button>
                     </div>
@@ -144,10 +148,10 @@
                         <div>
                             <label class="label">报告类型</label>
                             <select class="input">
-                                <option selected>月度报告</option>
-                                <option>季度报告</option>
-                                <option>年度报告</option>
-                                <option>专项报告</option>
+                                <option selected data-i18n="pages.reports.monthlyReport">月度报告</option>
+                                <option data-i18n="pages.reports.quarterlyReport">季度报告</option>
+                                <option data-i18n="pages.reports.annualReport">年度报告</option>
+                                <option data-i18n="pages.reports.customReport">专项报告</option>
                             </select>
                         </div>
                         <div>
@@ -169,16 +173,16 @@
                         </div>
                     </div>
                     <div class="flex justify-end space-x-3 mt-6">
-                        <button class="btn btn-secondary">取消</button>
+                        <button class="btn btn-secondary" data-i18n="pages.dataEntry.cancel">取消</button>
                         <button class="btn btn-primary">
-                            <i class="fas fa-magic mr-2"></i>生成报告
+                            <i class="fas fa-magic mr-2"></i><span data-i18n="pages.reports.generateReport">生成报告</span>
                         </button>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">历史报告</h3>
+                        <h3 class="card-title" data-i18n="pages.reports.reportHistory">历史报告</h3>
                         <div class="flex items-center space-x-3">
                             <input type="text" class="input" placeholder="搜索报告..." style="width: 200px;">
                             <select class="input" style="width: 120px;">
@@ -208,8 +212,8 @@
                                 <td>2024-03-01 10:32</td>
                                 <td><span class="badge badge-success">已提交</span></td>
                                 <td class="text-right">
-                                    <button class="btn btn-secondary text-xs mr-2">查看</button>
-                                    <button class="btn btn-outline text-xs mr-2">下载</button>
+                                    <button class="btn btn-secondary text-xs mr-2" data-i18n="pages.reports.preview">查看</button>
+                                    <button class="btn btn-outline text-xs mr-2" data-i18n="pages.reports.download">下载</button>
                                     <button class="btn btn-outline text-xs">删除</button>
                                 </td>
                             </tr>
@@ -220,8 +224,8 @@
                                 <td>2024-02-01 09:15</td>
                                 <td><span class="badge badge-success">已提交</span></td>
                                 <td class="text-right">
-                                    <button class="btn btn-secondary text-xs mr-2">查看</button>
-                                    <button class="btn btn-outline text-xs mr-2">下载</button>
+                                    <button class="btn btn-secondary text-xs mr-2" data-i18n="pages.reports.preview">查看</button>
+                                    <button class="btn btn-outline text-xs mr-2" data-i18n="pages.reports.download">下载</button>
                                     <button class="btn btn-outline text-xs">删除</button>
                                 </td>
                             </tr>
@@ -232,8 +236,8 @@
                                 <td>2024-01-05 14:20</td>
                                 <td><span class="badge badge-success">已提交</span></td>
                                 <td class="text-right">
-                                    <button class="btn btn-secondary text-xs mr-2">查看</button>
-                                    <button class="btn btn-outline text-xs mr-2">下载</button>
+                                    <button class="btn btn-secondary text-xs mr-2" data-i18n="pages.reports.preview">查看</button>
+                                    <button class="btn btn-outline text-xs mr-2" data-i18n="pages.reports.download">下载</button>
                                     <button class="btn btn-outline text-xs">删除</button>
                                 </td>
                             </tr>
@@ -244,8 +248,8 @@
                                 <td>2024-01-15 16:45</td>
                                 <td><span class="badge badge-warning">待审核</span></td>
                                 <td class="text-right">
-                                    <button class="btn btn-secondary text-xs mr-2">查看</button>
-                                    <button class="btn btn-outline text-xs mr-2">下载</button>
+                                    <button class="btn btn-secondary text-xs mr-2" data-i18n="pages.reports.preview">查看</button>
+                                    <button class="btn btn-outline text-xs mr-2" data-i18n="pages.reports.download">下载</button>
                                     <button class="btn btn-outline text-xs">提交</button>
                                 </td>
                             </tr>
@@ -265,5 +269,6 @@
             </div>
         </main>
     </div>
+    <script src="../js/i18n.js"></script>
 </body>
 </html>

@@ -17,51 +17,51 @@
                         <i class="fas fa-leaf text-white text-lg"></i>
                     </div>
                     <div>
-                        <h1 class="text-base font-bold text-gray-800">碳排放管理</h1>
-                        <p class="text-xs text-gray-500">PC端原型</p>
+                        <h1 class="text-base font-bold text-gray-800" data-i18n="common.systemName">碳排放管理</h1>
+                        <p class="text-xs text-gray-500" data-i18n="common.pcPrototype">PC端原型</p>
                     </div>
                 </div>
             </div>
             <nav class="sidebar-menu">
-                <div class="menu-section">概览</div>
+                <div class="menu-section" data-i18n="nav.overview">概览</div>
                 <a href="dashboard.html" class="menu-item">
                     <i class="fas fa-tachometer-alt"></i>
-                    <span>数据概览</span>
+                    <span data-i18n="nav.dashboard">数据概览</span>
                 </a>
-                <div class="menu-section">数据管理</div>
+                <div class="menu-section" data-i18n="nav.dataManagement">数据管理</div>
                 <a href="data-entry.html" class="menu-item active">
                     <i class="fas fa-edit"></i>
-                    <span>数据录入</span>
+                    <span data-i18n="nav.dataEntry">数据录入</span>
                 </a>
                 <a href="monitoring.html" class="menu-item">
                     <i class="fas fa-eye"></i>
-                    <span>实时监测</span>
+                    <span data-i18n="nav.monitoring">实时监测</span>
                 </a>
                 <a href="analysis.html" class="menu-item">
                     <i class="fas fa-chart-pie"></i>
-                    <span>数据分析</span>
+                    <span data-i18n="nav.analysis">数据分析</span>
                 </a>
-                <div class="menu-section">报告交易</div>
+                <div class="menu-section" data-i18n="nav.reportTrading">报告交易</div>
                 <a href="reports.html" class="menu-item">
                     <i class="fas fa-file-alt"></i>
-                    <span>报告中心</span>
+                    <span data-i18n="nav.reports">报告中心</span>
                 </a>
                 <a href="trading.html" class="menu-item">
                     <i class="fas fa-exchange-alt"></i>
-                    <span>碳交易</span>
+                    <span data-i18n="nav.trading">碳交易</span>
                 </a>
-                <div class="menu-section">系统管理</div>
+                <div class="menu-section" data-i18n="nav.systemManagement">系统管理</div>
                 <a href="solutions.html" class="menu-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>减排方案</span>
+                    <span data-i18n="nav.solutions">减排方案</span>
                 </a>
                 <a href="company.html" class="menu-item">
                     <i class="fas fa-building"></i>
-                    <span>企业管理</span>
+                    <span data-i18n="nav.company">企业管理</span>
                 </a>
                 <a href="profile.html" class="menu-item">
                     <i class="fas fa-user"></i>
-                    <span>个人中心</span>
+                    <span data-i18n="nav.profile">个人中心</span>
                 </a>
             </nav>
         </aside>
@@ -70,17 +70,21 @@
             <header class="header">
                 <div class="flex items-center space-x-4">
                     <div class="breadcrumb">
-                        <a href="dashboard.html">首页</a>
+                        <a href="dashboard.html" data-i18n="nav.dashboard">首页</a>
                         <i class="fas fa-chevron-right text-xs"></i>
-                        <span>数据录入</span>
+                        <span data-i18n="nav.dataEntry">数据录入</span>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
+                    <button id="langToggle" class="lang-toggle-btn" onclick="i18n.toggleLang()">
+                        <i class="fas fa-globe"></i>
+                        <span class="lang-text">EN</span>
+                    </button>
                     <button class="btn btn-outline text-sm">
-                        <i class="fas fa-history mr-2"></i>历史记录
+                        <i class="fas fa-history mr-2"></i><span data-i18n="pages.dataEntry.viewHistory">历史记录</span>
                     </button>
                     <button class="btn btn-primary text-sm">
-                        <i class="fas fa-upload mr-2"></i>批量导入
+                        <i class="fas fa-upload mr-2"></i><span data-i18n="pages.dataEntry.batchImport">批量导入</span>
                     </button>
                     <div class="flex items-center space-x-3">
                         <button class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-gray-200">
@@ -98,7 +102,7 @@
                             <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                                 <i class="fas fa-industry text-green-600 text-2xl"></i>
                             </div>
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">生产排放</h3>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2" data-i18n="dashboard.productionWorkshop">生产排放</h3>
                             <p class="text-sm text-gray-600">生产车间直接排放</p>
                         </div>
                     </button>
@@ -107,7 +111,7 @@
                             <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                                 <i class="fas fa-truck text-blue-600 text-2xl"></i>
                             </div>
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">运输排放</h3>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2" data-i18n="dashboard.transportation">运输排放</h3>
                             <p class="text-sm text-gray-600">交通运输过程排放</p>
                         </div>
                     </button>
@@ -125,34 +129,34 @@
                 <div class="grid-2">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">数据录入表单</h3>
-                            <span class="badge badge-info">生产排放</span>
+                            <h3 class="card-title" data-i18n="pages.dataEntry.title">数据录入表单</h3>
+                            <span class="badge badge-info" data-i18n="dashboard.productionWorkshop">生产排放</span>
                         </div>
                         <form class="space-y-5">
                             <div class="grid-2">
                                 <div>
-                                    <label class="label">排放类型 <span class="text-red-500">*</span></label>
+                                    <label class="label"><span data-i18n="pages.dataEntry.emissionType">排放类型</span> <span class="text-red-500">*</span></label>
                                     <select class="input">
-                                        <option>请选择排放类型</option>
-                                        <option selected>直接排放（范围一）</option>
-                                        <option>能源间接排放（范围二）</option>
+                                        <option data-i18n="pages.dataEntry.emissionTypePlaceholder">请选择排放类型</option>
+                                        <option selected data-i18n="pages.dataEntry.directEmission">直接排放（范围一）</option>
+                                        <option data-i18n="pages.dataEntry.indirectEmission">能源间接排放（范围二）</option>
                                         <option>其他间接排放（范围三）</option>
                                     </select>
                                 </div>
                                 <div>
-                                    <label class="label">排放源 <span class="text-red-500">*</span></label>
+                                    <label class="label"><span data-i18n="pages.dataEntry.emissionSource">排放源</span> <span class="text-red-500">*</span></label>
                                     <select class="input">
-                                        <option>请选择排放源</option>
+                                        <option data-i18n="pages.dataEntry.emissionSourcePlaceholder">请选择排放源</option>
                                         <option selected>生产车间A</option>
                                         <option>生产车间B</option>
-                                        <option>办公区域</option>
+                                        <option data-i18n="pages.dataEntry.officeArea">办公区域</option>
                                         <option>运输车辆</option>
                                     </select>
                                 </div>
                             </div>
                             <div>
-                                <label class="label">排放量（吨CO₂）<span class="text-red-500">*</span></label>
-                                <input type="number" class="input" placeholder="请输入排放量" value="156.8">
+                                <label class="label"><span data-i18n="pages.dataEntry.emissionAmount">排放量（吨CO₂）</span><span class="text-red-500">*</span></label>
+                                <input type="number" class="input" data-i18n-placeholder="pages.dataEntry.emissionAmountPlaceholder" placeholder="请输入排放量" value="156.8">
                             </div>
                             <div class="grid-2">
                                 <div>
@@ -181,12 +185,12 @@
                                 </div>
                             </div>
                             <div>
-                                <label class="label">备注说明</label>
-                                <textarea class="input" rows="3" placeholder="请输入备注信息"></textarea>
+                                <label class="label" data-i18n="pages.dataEntry.remark">备注说明</label>
+                                <textarea class="input" rows="3" data-i18n-placeholder="pages.dataEntry.remarkPlaceholder" placeholder="请输入备注信息"></textarea>
                             </div>
                             <div class="flex space-x-3 pt-3">
                                 <button type="button" class="btn btn-secondary flex-1">保存草稿</button>
-                                <button type="submit" class="btn btn-primary flex-1">提交数据</button>
+                                <button type="submit" class="btn btn-primary flex-1" data-i18n="pages.dataEntry.submit">提交数据</button>
                             </div>
                         </form>
                     </div>
@@ -194,7 +198,7 @@
                     <div>
                         <div class="card mb-6">
                             <div class="card-header">
-                                <h3 class="card-title">批量导入</h3>
+                                <h3 class="card-title" data-i18n="pages.dataEntry.batchImport">批量导入</h3>
                                 <span class="badge badge-success">推荐</span>
                             </div>
                             <div class="alert alert-info mb-4">
@@ -206,18 +210,18 @@
                             </div>
                             <div class="flex space-x-3">
                                 <button class="btn btn-outline flex-1">
-                                    <i class="fas fa-download mr-2"></i>下载模板
+                                    <i class="fas fa-download mr-2"></i><span data-i18n="pages.dataEntry.downloadTemplate">下载模板</span>
                                 </button>
                                 <button class="btn btn-primary flex-1">
-                                    <i class="fas fa-upload mr-2"></i>上传文件
+                                    <i class="fas fa-upload mr-2"></i><span data-i18n="pages.dataEntry.selectFile">上传文件</span>
                                 </button>
                             </div>
                         </div>
 
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">最近录入</h3>
-                                <button class="text-green-600 text-sm font-medium hover:text-green-700">查看全部</button>
+                                <h3 class="card-title" data-i18n="pages.dataEntry.recentRecords">最近录入</h3>
+                                <button class="text-green-600 text-sm font-medium hover:text-green-700" data-i18n="common.viewAll">查看全部</button>
                             </div>
                             <div class="space-y-3">
                                 <div class="flex items-center p-3 bg-gray-50 rounded-lg">
@@ -279,5 +283,6 @@
             </div>
         </main>
     </div>
+    <script src="../js/i18n.js"></script>
 </body>
 </html>

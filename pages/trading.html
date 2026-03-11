@@ -17,51 +17,51 @@
                         <i class="fas fa-leaf text-white text-lg"></i>
                     </div>
                     <div>
-                        <h1 class="text-base font-bold text-gray-800">碳排放管理</h1>
-                        <p class="text-xs text-gray-500">PC端原型</p>
+                        <h1 class="text-base font-bold text-gray-800" data-i18n="common.systemName">碳排放管理</h1>
+                        <p class="text-xs text-gray-500" data-i18n="common.pcPrototype">PC端原型</p>
                     </div>
                 </div>
             </div>
             <nav class="sidebar-menu">
-                <div class="menu-section">概览</div>
+                <div class="menu-section" data-i18n="nav.overview">概览</div>
                 <a href="dashboard.html" class="menu-item">
                     <i class="fas fa-tachometer-alt"></i>
-                    <span>数据概览</span>
+                    <span data-i18n="nav.dashboard">数据概览</span>
                 </a>
-                <div class="menu-section">数据管理</div>
+                <div class="menu-section" data-i18n="nav.dataManagement">数据管理</div>
                 <a href="data-entry.html" class="menu-item">
                     <i class="fas fa-edit"></i>
-                    <span>数据录入</span>
+                    <span data-i18n="nav.dataEntry">数据录入</span>
                 </a>
                 <a href="monitoring.html" class="menu-item">
                     <i class="fas fa-eye"></i>
-                    <span>实时监测</span>
+                    <span data-i18n="nav.monitoring">实时监测</span>
                 </a>
                 <a href="analysis.html" class="menu-item">
                     <i class="fas fa-chart-pie"></i>
-                    <span>数据分析</span>
+                    <span data-i18n="nav.analysis">数据分析</span>
                 </a>
-                <div class="menu-section">报告交易</div>
+                <div class="menu-section" data-i18n="nav.reportTrading">报告交易</div>
                 <a href="reports.html" class="menu-item">
                     <i class="fas fa-file-alt"></i>
-                    <span>报告中心</span>
+                    <span data-i18n="nav.reports">报告中心</span>
                 </a>
                 <a href="trading.html" class="menu-item active">
                     <i class="fas fa-exchange-alt"></i>
-                    <span>碳交易</span>
+                    <span data-i18n="nav.trading">碳交易</span>
                 </a>
-                <div class="menu-section">系统管理</div>
+                <div class="menu-section" data-i18n="nav.systemManagement">系统管理</div>
                 <a href="solutions.html" class="menu-item">
                     <i class="fas fa-lightbulb"></i>
-                    <span>减排方案</span>
+                    <span data-i18n="nav.solutions">减排方案</span>
                 </a>
                 <a href="company.html" class="menu-item">
                     <i class="fas fa-building"></i>
-                    <span>企业管理</span>
+                    <span data-i18n="nav.company">企业管理</span>
                 </a>
                 <a href="profile.html" class="menu-item">
                     <i class="fas fa-user"></i>
-                    <span>个人中心</span>
+                    <span data-i18n="nav.profile">个人中心</span>
                 </a>
             </nav>
         </aside>
@@ -69,12 +69,16 @@
         <main class="main-content">
             <header class="header">
                 <div class="flex items-center space-x-4">
-                    <h2 class="text-xl font-bold text-gray-800">碳交易管理</h2>
+                    <h2 class="text-xl font-bold text-gray-800" data-i18n="pages.trading.title">碳交易管理</h2>
                     <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm">配额交易</span>
                 </div>
                 <div class="flex items-center space-x-4">
+                    <button id="langToggle" class="lang-toggle-btn" onclick="i18n.toggleLang()">
+                        <i class="fas fa-globe"></i>
+                        <span class="lang-text">EN</span>
+                    </button>
                     <button class="btn btn-outline text-sm">
-                        <i class="fas fa-history mr-2"></i>交易记录
+                        <i class="fas fa-history mr-2"></i><span data-i18n="pages.trading.tradingHistory">交易记录</span>
                     </button>
                     <div class="flex items-center space-x-3">
                         <button class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-gray-200">
@@ -89,7 +93,7 @@
                 <div class="stat-card mb-6">
                     <div class="flex items-center justify-between">
                         <div>
-                            <p class="text-sm opacity-80 mb-2">碳配额余额</p>
+                            <p class="text-sm opacity-80 mb-2" data-i18n="pages.trading.myQuota">碳配额余额</p>
                             <p class="text-5xl font-bold mb-1">125,680 <span class="text-2xl font-normal">吨CO₂</span></p>
                             <p class="text-sm opacity-80">有效期至: 2024-12-31</p>
                         </div>
@@ -117,7 +121,7 @@
                             <span class="text-xs text-gray-500">本年</span>
                         </div>
                         <p class="text-3xl font-bold text-gray-800 mb-1">38,456</p>
-                        <p class="text-sm text-gray-600">已使用(吨)</p>
+                        <p class="text-sm text-gray-600" data-i18n="pages.trading.usedQuota">已使用(吨)</p>
                     </div>
                     <div class="card">
                         <div class="flex items-center justify-between mb-3">
@@ -125,7 +129,7 @@
                             <span class="text-xs text-gray-500">本年</span>
                         </div>
                         <p class="text-3xl font-bold text-gray-800 mb-1">12,500</p>
-                        <p class="text-sm text-gray-600">已购买(吨)</p>
+                        <p class="text-sm text-gray-600" data-i18n="pages.trading.buyQuota">已购买(吨)</p>
                     </div>
                     <div class="card">
                         <div class="flex items-center justify-between mb-3">
@@ -133,7 +137,7 @@
                             <span class="text-xs text-gray-500">本年</span>
                         </div>
                         <p class="text-3xl font-bold text-gray-800 mb-1">2,364</p>
-                        <p class="text-sm text-gray-600">已出售(吨)</p>
+                        <p class="text-sm text-gray-600" data-i18n="pages.trading.sellQuota">已出售(吨)</p>
                     </div>
                 </div>
 
@@ -153,11 +157,11 @@
                     </div>
                     <div class="grid-3">
                         <div class="text-center p-3 bg-gray-50 rounded-lg">
-                            <p class="text-xs text-gray-500 mb-1">剩余配额</p>
+                            <p class="text-xs text-gray-500 mb-1" data-i18n="pages.trading.remainingQuota">剩余配额</p>
                             <p class="text-xl font-bold text-gray-800">125,680 吨</p>
                         </div>
                         <div class="text-center p-3 bg-gray-50 rounded-lg">
-                            <p class="text-xs text-gray-500 mb-1">已使用</p>
+                            <p class="text-xs text-gray-500 mb-1" data-i18n="pages.trading.usedQuota">已使用</p>
                             <p class="text-xl font-bold text-gray-800">38,456 吨</p>
                         </div>
                         <div class="text-center p-3 bg-gray-50 rounded-lg">
@@ -170,7 +174,7 @@
                 <div class="grid-2 mb-6">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">碳市场行情</h3>
+                            <h3 class="card-title" data-i18n="pages.trading.tradingMarket">碳市场行情</h3>
                             <button class="text-green-600 text-sm font-medium">
                                 <i class="fas fa-sync-alt mr-1"></i>刷新
                             </button>
@@ -184,7 +188,7 @@
                                 </p>
                             </div>
                             <div class="p-4 bg-blue-50 rounded-lg">
-                                <p class="text-xs text-gray-500 mb-1">成交量</p>
+                                <p class="text-xs text-gray-500 mb-1" data-i18n="pages.trading.quantity">成交量</p>
                                 <p class="text-3xl font-bold text-blue-600 mb-1">52,340</p>
                                 <p class="text-sm text-gray-500">吨 (今日)</p>
                             </div>
@@ -199,8 +203,8 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">交易记录</h3>
-                            <button class="text-green-600 text-sm font-medium">查看全部</button>
+                            <h3 class="card-title" data-i18n="pages.trading.tradingHistory">交易记录</h3>
+                            <button class="text-green-600 text-sm font-medium" data-i18n="common.viewAll">查看全部</button>
                         </div>
                         <div class="space-y-3">
                             <div class="flex items-center p-3 bg-green-50 rounded-lg border-l-4 border-green-500">
@@ -208,7 +212,7 @@
                                     <i class="fas fa-arrow-down text-green-600"></i>
                                 </div>
                                 <div class="flex-1">
-                                    <p class="text-sm font-medium text-gray-800">购买配额</p>
+                                    <p class="text-sm font-medium text-gray-800" data-i18n="pages.trading.buyQuota">购买配额</p>
                                     <p class="text-xs text-gray-500">2024-03-08 14:32</p>
                                 </div>
                                 <div class="text-right">
@@ -221,7 +225,7 @@
                                     <i class="fas fa-arrow-up text-red-600"></i>
                                 </div>
                                 <div class="flex-1">
-                                    <p class="text-sm font-medium text-gray-800">出售配额</p>
+                                    <p class="text-sm font-medium text-gray-800" data-i18n="pages.trading.sellQuota">出售配额</p>
                                     <p class="text-xs text-gray-500">2024-03-05 10:15</p>
                                 </div>
                                 <div class="text-right">
@@ -234,7 +238,7 @@
                                     <i class="fas fa-arrow-down text-green-600"></i>
                                 </div>
                                 <div class="flex-1">
-                                    <p class="text-sm font-medium text-gray-800">购买配额</p>
+                                    <p class="text-sm font-medium text-gray-800" data-i18n="pages.trading.buyQuota">购买配额</p>
                                     <p class="text-xs text-gray-500">2024-02-28 16:45</p>
                                 </div>
                                 <div class="text-right">
@@ -248,14 +252,15 @@
 
                 <div class="grid-2">
                     <button class="btn btn-primary py-4 text-base">
-                        <i class="fas fa-shopping-cart mr-2"></i>购买配额
+                        <i class="fas fa-shopping-cart mr-2"></i><span data-i18n="pages.trading.buyQuota">购买配额</span>
                     </button>
                     <button class="btn btn-outline py-4 text-base">
-                        <i class="fas fa-hand-holding-usd mr-2"></i>出售配额
+                        <i class="fas fa-hand-holding-usd mr-2"></i><span data-i18n="pages.trading.sellQuota">出售配额</span>
                     </button>
                 </div>
             </div>
         </main>
     </div>
+    <script src="../js/i18n.js"></script>
 </body>
 </html>
