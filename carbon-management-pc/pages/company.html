@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业管理 - 碳排放管理系统</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="min-h-screen bg-gray-100">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+                        <i class="fas fa-leaf text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-base font-bold text-gray-800">碳排放管理</h1>
+                        <p class="text-xs text-gray-500">PC端原型</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="menu-section">概览</div>
+                <a href="dashboard.html" class="menu-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>数据概览</span>
+                </a>
+                <div class="menu-section">数据管理</div>
+                <a href="data-entry.html" class="menu-item">
+                    <i class="fas fa-edit"></i>
+                    <span>数据录入</span>
+                </a>
+                <a href="monitoring.html" class="menu-item">
+                    <i class="fas fa-eye"></i>
+                    <span>实时监测</span>
+                </a>
+                <a href="analysis.html" class="menu-item">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>数据分析</span>
+                </a>
+                <div class="menu-section">报告交易</div>
+                <a href="reports.html" class="menu-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>报告中心</span>
+                </a>
+                <a href="trading.html" class="menu-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>碳交易</span>
+                </a>
+                <div class="menu-section">系统管理</div>
+                <a href="solutions.html" class="menu-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>减排方案</span>
+                </a>
+                <a href="company.html" class="menu-item active">
+                    <i class="fas fa-building"></i>
+                    <span>企业管理</span>
+                </a>
+                <a href="profile.html" class="menu-item">
+                    <i class="fas fa-user"></i>
+                    <span>个人中心</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="flex items-center space-x-4">
+                    <h2 class="text-xl font-bold text-gray-800">企业管理</h2>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="btn btn-outline text-sm">
+                        <i class="fas fa-download mr-2"></i>导出
+                    </button>
+                    <button class="btn btn-primary text-sm">
+                        <i class="fas fa-save mr-2"></i>保存
+                    </button>
+                    <div class="flex items-center space-x-3">
+                        <button class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-gray-200">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full cursor-pointer">
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div class="tabs mb-6">
+                    <button class="tab active">企业信息</button>
+                    <button class="tab">排放源管理</button>
+                    <button class="tab">组织架构</button>
+                    <button class="tab">成员管理</button>
+                    <button class="tab">权限设置</button>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">基本信息</h3>
+                            <button class="btn btn-secondary text-sm">
+                                <i class="fas fa-edit mr-2"></i>编辑
+                            </button>
+                        </div>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="label">企业名称</label>
+                                <input type="text" class="input" value="绿色制造科技有限公司">
+                            </div>
+                            <div>
+                                <label class="label">统一社会信用代码</label>
+                                <input type="text" class="input" value="91110000MA00XXXXX">
+                            </div>
+                            <div class="grid-2">
+                                <div>
+                                    <label class="label">行业类型</label>
+                                    <select class="input">
+                                        <option selected>制造业</option>
+                                        <option>化工业</option>
+                                        <option>电力行业</option>
+                                        <option>其他</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="label">企业规模</label>
+                                    <select class="input">
+                                        <option>小型企业</option>
+                                        <option selected>中型企业</option>
+                                        <option>大型企业</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="label">企业地址</label>
+                                <input type="text" class="input" value="北京市朝阳区绿色工业园区8号楼">
+                            </div>
+                            <div class="grid-2">
+                                <div>
+                                    <label class="label">联系人</label>
+                                    <input type="text" class="input" value="张经理">
+                                </div>
+                                <div>
+                                    <label class="label">联系电话</label>
+                                    <input type="text" class="input" value="138-0000-0000">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="label">企业邮箱</label>
+                                <input type="email" class="input" value="contact@greencompany.com">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div>
+                        <div class="card mb-6">
+                            <div class="card-header">
+                                <h3 class="card-title">碳排放配额</h3>
+                                <button class="text-green-600 text-sm font-medium">申请调整</button>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between p-4 bg-green-50 rounded-lg">
+                                    <div>
+                                        <p class="text-sm text-gray-600">2024年度配额</p>
+                                        <p class="text-2xl font-bold text-gray-800">150,000 吨</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-sm text-gray-600">有效期</p>
+                                        <p class="text-base font-medium text-gray-800">2024-12-31</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                                    <div>
+                                        <p class="text-sm text-gray-600">已使用配额</p>
+                                        <p class="text-2xl font-bold text-gray-800">38,456 吨</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-sm text-gray-600">使用率</p>
+                                        <p class="text-base font-medium text-green-600">25.6%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">企业Logo</h3>
+                            </div>
+                            <div class="flex items-center space-x-6">
+                                <div class="w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-leaf text-white text-3xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-sm text-gray-600 mb-3">支持 JPG、PNG 格式，建议尺寸 200x200 像素，文件大小不超过 2MB</p>
+                                    <div class="flex space-x-3">
+                                        <button class="btn btn-primary text-sm">
+                                            <i class="fas fa-upload mr-2"></i>上传
+                                        </button>
+                                        <button class="btn btn-secondary text-sm">删除</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-6">
+                    <div class="card-header">
+                        <h3 class="card-title">组织架构</h3>
+                        <button class="btn btn-primary text-sm">
+                            <i class="fas fa-plus mr-2"></i>添加部门
+                        </button>
+                    </div>
+                    <div class="grid-4">
+                        <div class="p-4 border border-gray-200 rounded-lg text-center">
+                            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-building text-blue-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-base font-semibold text-gray-800 mb-1">生产部门</h4>
+                            <p class="text-sm text-gray-600">25 人</p>
+                            <p class="text-xs text-gray-500 mt-2">主要排放源</p>
+                        </div>
+                        <div class="p-4 border border-gray-200 rounded-lg text-center">
+                            <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-truck text-purple-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-base font-semibold text-gray-800 mb-1">运输部门</h4>
+                            <p class="text-sm text-gray-600">15 人</p>
+                            <p class="text-xs text-gray-500 mt-2">次要排放源</p>
+                        </div>
+                        <div class="p-4 border border-gray-200 rounded-lg text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-leaf text-green-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-base font-semibold text-gray-800 mb-1">环保部门</h4>
+                            <p class="text-sm text-gray-600">8 人</p>
+                            <p class="text-xs text-gray-500 mt-2">监管部门</p>
+                        </div>
+                        <div class="p-4 border border-gray-200 rounded-lg text-center">
+                            <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-briefcase text-orange-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-base font-semibold text-gray-800 mb-1">行政部门</h4>
+                            <p class="text-sm text-gray-600">12 人</p>
+                            <p class="text-xs text-gray-500 mt-2">办公排放</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
