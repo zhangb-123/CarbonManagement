@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据概览 - 碳排放管理系统</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="min-h-screen bg-gray-100">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+                        <i class="fas fa-leaf text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-base font-bold text-gray-800">碳排放管理</h1>
+                        <p class="text-xs text-gray-500">PC端原型</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="menu-section">概览</div>
+                <a href="dashboard.html" class="menu-item active">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>数据概览</span>
+                </a>
+                <div class="menu-section">数据管理</div>
+                <a href="data-entry.html" class="menu-item">
+                    <i class="fas fa-edit"></i>
+                    <span>数据录入</span>
+                </a>
+                <a href="monitoring.html" class="menu-item">
+                    <i class="fas fa-eye"></i>
+                    <span>实时监测</span>
+                </a>
+                <a href="analysis.html" class="menu-item">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>数据分析</span>
+                </a>
+                <div class="menu-section">报告交易</div>
+                <a href="reports.html" class="menu-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>报告中心</span>
+                </a>
+                <a href="trading.html" class="menu-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>碳交易</span>
+                </a>
+                <div class="menu-section">系统管理</div>
+                <a href="solutions.html" class="menu-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>减排方案</span>
+                </a>
+                <a href="company.html" class="menu-item">
+                    <i class="fas fa-building"></i>
+                    <span>企业管理</span>
+                </a>
+                <a href="profile.html" class="menu-item">
+                    <i class="fas fa-user"></i>
+                    <span>个人中心</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="flex items-center space-x-4">
+                    <h2 class="text-xl font-bold text-gray-800">数据概览</h2>
+                    <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">实时更新</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="btn btn-outline text-sm">
+                        <i class="fas fa-download mr-2"></i>导出报告
+                    </button>
+                    <button class="btn btn-primary text-sm">
+                        <i class="fas fa-plus mr-2"></i>录入数据
+                    </button>
+                    <div class="flex items-center space-x-3">
+                        <button class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-gray-200">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <div class="w-10 h-10 rounded-full cursor-pointer flex items-center justify-center" style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div class="grid-4 mb-6">
+                    <div class="stat-card">
+                        <div class="flex items-center justify-between mb-3">
+                            <i class="fas fa-industry text-2xl opacity-80"></i>
+                            <span class="px-2 py-1 bg-white/20 rounded text-xs">今日</span>
+                        </div>
+                        <p class="text-3xl font-bold mb-1">423</p>
+                        <p class="text-sm opacity-80">吨CO₂</p>
+                        <p class="text-xs mt-3 opacity-90">
+                            <i class="fas fa-arrow-down mr-1"></i>较昨日 -5.2%
+                        </p>
+                    </div>
+                    <div class="stat-card blue">
+                        <div class="flex items-center justify-between mb-3">
+                            <i class="fas fa-chart-line text-2xl opacity-80"></i>
+                            <span class="px-2 py-1 bg-white/20 rounded text-xs">本月</span>
+                        </div>
+                        <p class="text-3xl font-bold mb-1">12,458</p>
+                        <p class="text-sm opacity-80">吨CO₂</p>
+                        <p class="text-xs mt-3 opacity-90">
+                            <i class="fas fa-arrow-down mr-1"></i>较上月 -8.5%
+                        </p>
+                    </div>
+                    <div class="stat-card orange">
+                        <div class="flex items-center justify-between mb-3">
+                            <i class="fas fa-bullseye text-2xl opacity-80"></i>
+                            <span class="px-2 py-1 bg-white/20 rounded text-xs">年度</span>
+                        </div>
+                        <p class="text-3xl font-bold mb-1">78%</p>
+                        <p class="text-sm opacity-80">目标完成率</p>
+                        <p class="text-xs mt-3 opacity-90">
+                            <i class="fas fa-info-circle mr-1"></i>剩余 22%
+                        </p>
+                    </div>
+                    <div class="stat-card purple">
+                        <div class="flex items-center justify-between mb-3">
+                            <i class="fas fa-tree text-2xl opacity-80"></i>
+                            <span class="px-2 py-1 bg-white/20 rounded text-xs">累计</span>
+                        </div>
+                        <p class="text-3xl font-bold mb-1">1,256</p>
+                        <p class="text-sm opacity-80">吨CO₂减排</p>
+                        <p class="text-xs mt-3 opacity-90">
+                            <i class="fas fa-award mr-1"></i>优秀
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid-2 mb-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">碳排放趋势</h3>
+                            <div class="flex items-center space-x-2">
+                                <select class="input" style="width: 120px;">
+                                    <option>近7天</option>
+                                    <option>近30天</option>
+                                    <option>近3个月</option>
+                                    <option>近1年</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="chart-container h-80">
+                            <svg viewBox="0 0 600 280" class="w-full h-full">
+                                <defs>
+                                    <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#10B981;stop-opacity:0.3" />
+                                        <stop offset="100%" style="stop-color:#10B981;stop-opacity:0.05" />
+                                    </linearGradient>
+                                </defs>
+                                <g class="grid-lines">
+                                    <line x1="60" y1="40" x2="580" y2="40" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,4"/>
+                                    <line x1="60" y1="90" x2="580" y2="90" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,4"/>
+                                    <line x1="60" y1="140" x2="580" y2="140" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,4"/>
+                                    <line x1="60" y1="190" x2="580" y2="190" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,4"/>
+                                    <line x1="60" y1="240" x2="580" y2="240" stroke="#E5E7EB" stroke-width="1"/>
+                                </g>
+                                <g class="y-axis">
+                                    <text x="50" y="45" fill="#9CA3AF" font-size="12" text-anchor="end">500</text>
+                                    <text x="50" y="95" fill="#9CA3AF" font-size="12" text-anchor="end">400</text>
+                                    <text x="50" y="145" fill="#9CA3AF" font-size="12" text-anchor="end">300</text>
+                                    <text x="50" y="195" fill="#9CA3AF" font-size="12" text-anchor="end">200</text>
+                                    <text x="50" y="245" fill="#9CA3AF" font-size="12" text-anchor="end">100</text>
+                                </g>
+                                <g class="x-axis">
+                                    <text x="100" y="260" fill="#9CA3AF" font-size="12" text-anchor="middle">周一</text>
+                                    <text x="180" y="260" fill="#9CA3AF" font-size="12" text-anchor="middle">周二</text>
+                                    <text x="260" y="260" fill="#9CA3AF" font-size="12" text-anchor="middle">周三</text>
+                                    <text x="340" y="260" fill="#9CA3AF" font-size="12" text-anchor="middle">周四</text>
+                                    <text x="420" y="260" fill="#9CA3AF" font-size="12" text-anchor="middle">周五</text>
+                                    <text x="500" y="260" fill="#9CA3AF" font-size="12" text-anchor="middle">周六</text>
+                                    <text x="560" y="260" fill="#9CA3AF" font-size="12" text-anchor="middle">周日</text>
+                                </g>
+                                <path class="area-fill" fill="url(#areaGradient)" d="M100,180 L180,150 L260,170 L340,120 L420,100 L500,130 L560,90 L560,240 L100,240 Z"/>
+                                <path class="line-chart" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M100,180 L180,150 L260,170 L340,120 L420,100 L500,130 L560,90"/>
+                                <g class="data-points">
+                                    <circle cx="100" cy="180" r="5" fill="#10B981"/>
+                                    <circle cx="180" cy="150" r="5" fill="#10B981"/>
+                                    <circle cx="260" cy="170" r="5" fill="#10B981"/>
+                                    <circle cx="340" cy="120" r="5" fill="#10B981"/>
+                                    <circle cx="420" cy="100" r="5" fill="#10B981"/>
+                                    <circle cx="500" cy="130" r="5" fill="#10B981"/>
+                                    <circle cx="560" cy="90" r="5" fill="#10B981"/>
+                                </g>
+                                <g class="data-labels">
+                                    <text x="100" y="170" fill="#059669" font-size="11" font-weight="500" text-anchor="middle">320</text>
+                                    <text x="180" y="140" fill="#059669" font-size="11" font-weight="500" text-anchor="middle">380</text>
+                                    <text x="260" y="160" fill="#059669" font-size="11" font-weight="500" text-anchor="middle">340</text>
+                                    <text x="340" y="110" fill="#059669" font-size="11" font-weight="500" text-anchor="middle">420</text>
+                                    <text x="420" y="90" fill="#059669" font-size="11" font-weight="500" text-anchor="middle">460</text>
+                                    <text x="500" y="120" fill="#059669" font-size="11" font-weight="500" text-anchor="middle">400</text>
+                                    <text x="560" y="80" fill="#059669" font-size="11" font-weight="500" text-anchor="middle">480</text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">排放源分布</h3>
+                            <button class="text-green-600 text-sm font-medium hover:text-green-700">查看全部</button>
+                        </div>
+                        <div class="pie-chart-container h-64 mb-6">
+                            <svg viewBox="0 0 300 250" class="w-full h-full">
+                                <defs>
+                                    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+                                    </filter>
+                                </defs>
+                                <g transform="translate(150, 120)" filter="url(#shadow)">
+                                    <path d="M 0 0 L 0 -90 A 90 90 0 0 1 85.6 27.8 Z" fill="#10B981">
+                                        <title>生产车间 45%</title>
+                                    </path>
+                                    <path d="M 0 0 L 85.6 27.8 A 90 90 0 0 1 -27.8 85.6 Z" fill="#3B82F6">
+                                        <title>交通运输 28%</title>
+                                    </path>
+                                    <path d="M 0 0 L -27.8 85.6 A 90 90 0 0 1 -85.6 -27.8 Z" fill="#8B5CF6">
+                                        <title>办公用电 15%</title>
+                                    </path>
+                                    <path d="M 0 0 L -85.6 -27.8 A 90 90 0 0 1 0 -90 Z" fill="#F59E0B">
+                                        <title>其他 12%</title>
+                                    </path>
+                                    <circle cx="0" cy="0" r="50" fill="white"/>
+                                    <text x="0" y="-5" fill="#1F2937" font-size="14" font-weight="600" text-anchor="middle">总排放</text>
+                                    <text x="0" y="15" fill="#10B981" font-size="16" font-weight="700" text-anchor="middle">12,458吨</text>
+                                </g>
+                                <g class="legend" transform="translate(20, 220)">
+                                    <rect x="0" y="0" width="12" height="12" rx="2" fill="#10B981"/>
+                                    <text x="18" y="10" fill="#374151" font-size="12">生产车间</text>
+                                    <rect x="85" y="0" width="12" height="12" rx="2" fill="#3B82F6"/>
+                                    <text x="103" y="10" fill="#374151" font-size="12">交通运输</text>
+                                    <rect x="170" y="0" width="12" height="12" rx="2" fill="#8B5CF6"/>
+                                    <text x="188" y="10" fill="#374151" font-size="12">办公用电</text>
+                                    <rect x="255" y="0" width="12" height="12" rx="2" fill="#F59E0B"/>
+                                    <text x="273" y="10" fill="#374151" font-size="12">其他</text>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <div class="flex items-center">
+                                        <span class="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                                        <span class="text-sm text-gray-700">生产车间</span>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-800">45% (5,606吨)</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 45%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <div class="flex items-center">
+                                        <span class="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+                                        <span class="text-sm text-gray-700">交通运输</span>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-800">28% (3,488吨)</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 28%; background: linear-gradient(90deg, #3B82F6 0%, #2563EB 100%);"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <div class="flex items-center">
+                                        <span class="w-3 h-3 bg-purple-500 rounded-full mr-2"></span>
+                                        <span class="text-sm text-gray-700">办公用电</span>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-800">15% (1,869吨)</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 15%; background: linear-gradient(90deg, #8B5CF6 0%, #7C3AED 100%);"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <div class="flex items-center">
+                                        <span class="w-3 h-3 bg-orange-500 rounded-full mr-2"></span>
+                                        <span class="text-sm text-gray-700">其他</span>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-800">12% (1,495吨)</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 12%; background: linear-gradient(90deg, #F59E0B 0%, #D97706 100%);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">待办事项</h3>
+                            <span class="badge badge-danger">3项</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center p-4 bg-red-50 rounded-lg border border-red-100">
+                                <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-exclamation-triangle text-red-500 text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-base font-medium text-gray-800 mb-1">月度报告待提交</p>
+                                    <p class="text-sm text-gray-500">截止日期：2024-03-15</p>
+                                </div>
+                                <button class="btn btn-primary text-sm">立即处理</button>
+                            </div>
+                            <div class="flex items-center p-4 bg-yellow-50 rounded-lg border border-yellow-100">
+                                <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-clock text-yellow-600 text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-base font-medium text-gray-800 mb-1">数据审核待处理</p>
+                                    <p class="text-sm text-gray-500">5条数据待审核</p>
+                                </div>
+                                <button class="btn btn-secondary text-sm">查看详情</button>
+                            </div>
+                            <div class="flex items-center p-4 bg-blue-50 rounded-lg border border-blue-100">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-calendar-check text-blue-500 text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-base font-medium text-gray-800 mb-1">设备巡检提醒</p>
+                                    <p class="text-sm text-gray-500">巡检日期：2024-03-12</p>
+                                </div>
+                                <button class="btn btn-secondary text-sm">查看详情</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">减排动态</h3>
+                            <button class="text-green-600 text-sm font-medium hover:text-green-700">更多</button>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-20 h-20 rounded-lg mr-4 flex items-center justify-center" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%);">
+                                    <i class="fas fa-solar-panel text-white text-2xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-base font-medium text-gray-800 mb-2">光伏发电项目启动</p>
+                                    <p class="text-sm text-gray-600 mb-3">预计年减排量：2,400吨CO₂</p>
+                                    <div class="flex items-center justify-between">
+                                        <span class="badge badge-success">进行中</span>
+                                        <span class="text-sm text-gray-500">进度 65%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-20 h-20 rounded-lg mr-4 flex items-center justify-center" style="background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);">
+                                    <i class="fas fa-cogs text-white text-2xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-base font-medium text-gray-800 mb-2">节能设备改造完成</p>
+                                    <p class="text-sm text-gray-600 mb-3">已完成80%设备升级</p>
+                                    <div class="flex items-center justify-between">
+                                        <span class="badge badge-info">已完成</span>
+                                        <span class="text-sm text-gray-500">2024-03-08</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
