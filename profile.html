@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心 - 碳排放管理系统</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="min-h-screen bg-gray-100">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+                        <i class="fas fa-leaf text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-base font-bold text-gray-800">碳排放管理</h1>
+                        <p class="text-xs text-gray-500">PC端原型</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="menu-section">概览</div>
+                <a href="dashboard.html" class="menu-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>数据概览</span>
+                </a>
+                <div class="menu-section">数据管理</div>
+                <a href="data-entry.html" class="menu-item">
+                    <i class="fas fa-edit"></i>
+                    <span>数据录入</span>
+                </a>
+                <a href="monitoring.html" class="menu-item">
+                    <i class="fas fa-eye"></i>
+                    <span>实时监测</span>
+                </a>
+                <a href="analysis.html" class="menu-item">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>数据分析</span>
+                </a>
+                <div class="menu-section">报告交易</div>
+                <a href="reports.html" class="menu-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>报告中心</span>
+                </a>
+                <a href="trading.html" class="menu-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>碳交易</span>
+                </a>
+                <div class="menu-section">系统管理</div>
+                <a href="solutions.html" class="menu-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>减排方案</span>
+                </a>
+                <a href="company.html" class="menu-item">
+                    <i class="fas fa-building"></i>
+                    <span>企业管理</span>
+                </a>
+                <a href="profile.html" class="menu-item active">
+                    <i class="fas fa-user"></i>
+                    <span>个人中心</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="flex items-center space-x-4">
+                    <h2 class="text-xl font-bold text-gray-800">个人中心</h2>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="btn btn-outline text-sm">
+                        <i class="fas fa-cog mr-2"></i>系统设置
+                    </button>
+                    <div class="flex items-center space-x-3">
+                        <button class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-gray-200 relative">
+                            <i class="fas fa-bell"></i>
+                            <span class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white rounded-full text-xs flex items-center justify-center">3</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div class="stat-card mb-6">
+                    <div class="flex items-center space-x-6">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop" class="w-24 h-24 rounded-full border-4 border-white/30">
+                        <div class="flex-1">
+                            <h2 class="text-3xl font-bold mb-1">张经理</h2>
+                            <p class="text-base opacity-90 mb-3">环保部门主管</p>
+                            <div class="flex items-center space-x-4 text-sm opacity-80">
+                                <span><i class="fas fa-building mr-2"></i>绿色制造科技有限公司</span>
+                                <span><i class="fas fa-envelope mr-2"></i>zhang@greencompany.com</span>
+                            </div>
+                        </div>
+                        <button class="btn bg-white/20 hover:bg-white/30 text-white">
+                            <i class="fas fa-edit mr-2"></i>编辑资料
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid-3 mb-6">
+                    <div class="card text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-edit text-green-600 text-2xl"></i>
+                        </div>
+                        <p class="text-3xl font-bold text-gray-800 mb-1">156</p>
+                        <p class="text-sm text-gray-600">录入数据</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-file-alt text-blue-600 text-2xl"></i>
+                        </div>
+                        <p class="text-3xl font-bold text-gray-800 mb-1">23</p>
+                        <p class="text-sm text-gray-600">生成报告</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-lightbulb text-purple-600 text-2xl"></i>
+                        </div>
+                        <p class="text-3xl font-bold text-gray-800 mb-1">8</p>
+                        <p class="text-sm text-gray-600">减排项目</p>
+                    </div>
+                </div>
+
+                <div class="grid-2 mb-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">个人信息</h3>
+                        </div>
+                        <form class="space-y-4">
+                            <div class="grid-2">
+                                <div>
+                                    <label class="label">姓名</label>
+                                    <input type="text" class="input" value="张经理">
+                                </div>
+                                <div>
+                                    <label class="label">职位</label>
+                                    <input type="text" class="input" value="环保部门主管">
+                                </div>
+                            </div>
+                            <div class="grid-2">
+                                <div>
+                                    <label class="label">手机号</label>
+                                    <input type="text" class="input" value="138-0000-0000">
+                                </div>
+                                <div>
+                                    <label class="label">邮箱</label>
+                                    <input type="email" class="input" value="zhang@greencompany.com">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="label">所属部门</label>
+                                <select class="input">
+                                    <option selected>环保部门</option>
+                                    <option>生产部门</option>
+                                    <option>运输部门</option>
+                                    <option>行政部门</option>
+                                </select>
+                            </div>
+                            <div class="flex justify-end space-x-3 pt-2">
+                                <button class="btn btn-secondary">取消</button>
+                                <button class="btn btn-primary">保存修改</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div>
+                        <div class="card mb-6">
+                            <div class="card-header">
+                                <h3 class="card-title">账户设置</h3>
+                            </div>
+                            <div class="space-y-2">
+                                <a href="#" class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                            <i class="fas fa-lock text-blue-600"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-base font-medium text-gray-800">修改密码</p>
+                                            <p class="text-sm text-gray-500">定期修改密码保护账户安全</p>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-chevron-right text-gray-400"></i>
+                                </a>
+                                <a href="#" class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                            <i class="fas fa-shield-alt text-green-600"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-base font-medium text-gray-800">安全设置</p>
+                                            <p class="text-sm text-gray-500">两步验证、登录设备管理</p>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-chevron-right text-gray-400"></i>
+                                </a>
+                                <a href="#" class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
+                                            <i class="fas fa-bell text-orange-600"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-base font-medium text-gray-800">消息通知</p>
+                                            <p class="text-sm text-gray-500">系统通知、预警提醒设置</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <span class="badge badge-danger mr-3">3</span>
+                                        <i class="fas fa-chevron-right text-gray-400"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">其他</h3>
+                            </div>
+                            <div class="space-y-2">
+                                <a href="#" class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center mr-4">
+                                            <i class="fas fa-question-circle text-cyan-600"></i>
+                                        </div>
+                                        <span class="text-base font-medium text-gray-800">帮助中心</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right text-gray-400"></i>
+                                </a>
+                                <a href="#" class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                                            <i class="fas fa-info-circle text-indigo-600"></i>
+                                        </div>
+                                        <span class="text-base font-medium text-gray-800">关于我们</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right text-gray-400"></i>
+                                </a>
+                                <a href="#" class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center mr-4">
+                                            <i class="fas fa-star text-pink-600"></i>
+                                        </div>
+                                        <span class="text-base font-medium text-gray-800">给我们评分</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right text-gray-400"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">最近操作记录</h3>
+                        <button class="text-green-600 text-sm font-medium">查看全部</button>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>操作内容</th>
+                                <th>IP地址</th>
+                                <th>操作时间</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-medium">登录系统</td>
+                                <td>192.168.1.100</td>
+                                <td>2024-03-10 16:32:15</td>
+                                <td><span class="badge badge-success">成功</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">录入碳排放数据</td>
+                                <td>192.168.1.100</td>
+                                <td>2024-03-10 14:25:30</td>
+                                <td><span class="badge badge-success">成功</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">生成月度报告</td>
+                                <td>192.168.1.100</td>
+                                <td>2024-03-10 10:15:22</td>
+                                <td><span class="badge badge-success">成功</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">修改个人信息</td>
+                                <td>192.168.1.100</td>
+                                <td>2024-03-09 16:45:10</td>
+                                <td><span class="badge badge-success">成功</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-6 text-center">
+                    <button class="btn bg-red-50 text-red-600 hover:bg-red-100 px-8">
+                        <i class="fas fa-sign-out-alt mr-2"></i>退出登录
+                    </button>
+                    <p class="text-xs text-gray-400 mt-4">版本 v1.0.0 | 碳排放管理系统</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
